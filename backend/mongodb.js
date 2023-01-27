@@ -10,7 +10,7 @@ dotenv.config();
 // Connecto to database
 const connectDB = () => {
   // Método de conexión para la base de datos
-  mongoose.connect('mongodb+srv://JonathanVG:JonathanVG@todo1.6jdeklf.mongodb.net/TodoList?retryWrites=true&w=majority', {
+  mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
